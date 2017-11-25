@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1"
+        tools:context="com.example.denis.mobilne_filh.MainActivity"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="73dp">
+
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="0.09"
+            android:text="Hajs" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="101dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView6"
+            android:layout_marginTop="11dp"
+            android:text="1000" />
+
+        <TextView
+            android:id="@+id/textView9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/textView7"
+            android:layout_marginEnd="12dp"
+            android:text="100000" />
+
+        <TextView
+            android:id="@+id/tvKwota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView7"
+            android:layout_centerHorizontal="true" />
+
+        <SeekBar
+            android:id="@+id/sbKwota"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView9"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView7"
+            android:layout_marginTop="13dp"
+            android:max="99"
+            android:progress="10" />
+
+        <EditText
+            android:id="@+id/EtWynik"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:gravity="bottom"
+            android:inputType="textMultiLine"
+            android:textAlignment="viewStart"
+            android:layout_marginTop="25dp"
+            android:layout_below="@+id/etOproc"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true" />
+
+        <Spinner
+            android:id="@+id/spinner_jeden"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView2"
+            android:layout_marginTop="12dp"
+            android:entries="@array/miesiace"
+            android:prompt="@string/prompt_kredyt" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spinner_lata"
+            android:layout_marginTop="16dp"
+            android:text="Ilość rat w roku" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/spinner_jeden"
+            android:layout_marginTop="22dp"
+            android:text="Oprocentowanie" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Prowizja (w %)"
+            android:layout_above="@+id/etOproc"
+            android:layout_toEndOf="@+id/etOproc" />
+
+        <SeekBar
+            android:id="@+id/sbProwizja"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:max="4"
+            android:progress="2"
+            android:layout_alignBottom="@+id/etOproc"
+            android:layout_alignParentEnd="true"
+            android:layout_toEndOf="@+id/etOproc" />
+
+        <EditText
+            android:id="@+id/etOproc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/textView"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView3"
+            android:layout_toStartOf="@+id/tvKwota"
+            android:ems="10"
+            android:hint="12.8"
+            android:inputType="numberDecimal"
+            android:text="12.8" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/sbKwota"
+            android:layout_marginTop="14dp"
+            android:text="Okres kredytu (w latach)" />
+
+        <Spinner
+            android:id="@+id/spinner_lata"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView"
+            android:layout_marginTop="13dp"
+            android:entries="@array/lata" />
+
+        <TextView
+            android:id="@+id/tvProw"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView4"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/textView4" />
+
+    </RelativeLayout>
+</ScrollView>
